@@ -1,0 +1,81 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #2d0036, #4b005e);
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  color: #ffffff;
+  margin-top: 20px;
+  text-shadow: 1px 1px 3px #000000;
+}
+
+button {
+  background-color: white;
+  color: #4b005e;
+  border: 2px solid #ff66c4;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 10px #ffb6e6;
+}
+
+button:hover {
+  background: linear-gradient(to right, #ff66c4, #ff99cc);
+  color: white;
+  border: 2px solid #ff33a1;
+  box-shadow: 0 0 15px #ffb6e6;
+}
+
+.hidden {
+  display: none;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 12px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #3c005a;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #ff66c4;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 0 10px #ff66c4;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+  background-color: #5a007d;
+}
+
+.cell.disabled {
+  pointer-events: none;
+  background-color: #6a0099;
+}
+
+.score {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #ffd6f7;
+  text-shadow: 1px 1px 3px #000;
+}
